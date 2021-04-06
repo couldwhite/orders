@@ -34,12 +34,12 @@ public class OrderRestController {
         return new ResponseEntity<>(orders, HttpStatus.OK);
     }
 
+    @CrossOrigin
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Orders> saveOrder (@RequestBody @Validated Orders orders){
-        if (orders ==null){
+        if (orders ==null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-
         this.orderServiceInterface.save(orders);
         return new ResponseEntity<>(HttpStatus.OK);
     }

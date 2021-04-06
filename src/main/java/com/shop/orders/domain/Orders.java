@@ -18,4 +18,7 @@ public class Orders {
     private Date departureTime;
     private Date arrivedTime;
     private Date closedOrderTime;
+    private Long customerId;
+    private Long supplierId;
+    private Long productId;
 }
